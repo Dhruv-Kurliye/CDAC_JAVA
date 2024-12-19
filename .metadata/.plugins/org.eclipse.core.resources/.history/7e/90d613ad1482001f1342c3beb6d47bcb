@@ -1,0 +1,34 @@
+package day9;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Tweets {
+	
+	public static void main(String[] args) {
+		List<Tweeter> Tweets=new ArrayList<Tweeter>();
+		 Set<String> tweet1 = new TreeSet<>();
+	        tweet1.add("#modi");
+	        tweet1.add("#votebank");
+		Tweets.add(new Tweeter("Modi 3.0",12,2525,tweet1));
+		 Set<String> tweet2 = new TreeSet<>();
+	        tweet2.add("#floods");
+	        tweet2.add("#watercrises");
+		Tweets.add(new Tweeter("Flood in Ganga",11,255,tweet2));
+		 Set<String> tweet3 = new TreeSet<>();
+	        tweet3.add("#Chara");
+	        tweet3.add("#corruption");
+		Tweets.add(new Tweeter("Chara Ghotala",10,25555,tweet3));
+		 Set<String> tweet4 = new TreeSet<>();
+	        tweet4.add("#riots");
+	        tweet4.add("#bloodbath");
+		Tweets.add(new Tweeter("Riots in WB",2,8725,tweet4));
+		 Set<String> tweet5 = new TreeSet<>();
+	        tweet5.add("#blockbuster");
+	        tweet5.add("#200cr");
+		Tweets.add(new Tweeter("Devara",1,1225,tweet5));
+	}
+
+}

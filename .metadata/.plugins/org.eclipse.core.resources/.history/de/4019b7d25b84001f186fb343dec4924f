@@ -1,0 +1,35 @@
+package day10;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Period;
+
+public class DateAssignment {
+	public static void main(String[] args) {
+
+		LocalDate today = LocalDate.now();
+		System.out.println(today);
+		
+		LocalDate Birthday = LocalDate.of(2003, 6,2);
+		System.out.println(Birthday);
+		
+		Period Age= today.until(Birthday);
+		System.out.println(Age);
+		
+		LocalDate Programmers_Day = LocalDate.of(2025, 9,13);
+		System.out.println(Programmers_Day.getDayOfWeek());
+		
+		
+		for(int Month=1; Month<=12; Month++) {
+			LocalDate first_day=LocalDate.of(2024, Month, 1);
+			
+			if (first_day.getDayOfWeek()==DayOfWeek.SUNDAY) {
+				System.out.println(first_day.getMonth());
+			}
+		}
+		
+		LocalTime now = LocalTime.now();
+		System.out.println(now);
+	}
+}

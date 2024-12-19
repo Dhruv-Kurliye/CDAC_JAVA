@@ -1,0 +1,24 @@
+package day9;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+
+public class DemoLocalDate {
+	
+	public static void main(String[] args) {
+		LocalDate today = LocalDate.now();
+		System.out.println(today);
+		
+		LocalDate diwali = LocalDate.of(2025, 11,1);
+		System.out.println(diwali);
+		
+		Period timetodiwali = today.until(diwali);
+		System.out.println(timetodiwali);
+		System.out.println(timetodiwali.getYears()+"year(s)" + timetodiwali.getMonths()+"month(s)" + timetodiwali.getDays()+"day(s)");
+		
+		long daystodiwali = today.until(diwali, ChronoUnit.DAYS);
+		System.out.println(daystodiwali+"days");
+	}
+
+}

@@ -1,0 +1,13 @@
+package Day1;
+
+import day8.Math;
+
+public class Factorial {
+     public static void main(String args[]) {
+    	 Math m= new Math();
+    	 m.Factorial(5);
+    	 
+    	 System.out.println(m.Prime(7));
+    			 
+     }
+}

@@ -1,0 +1,23 @@
+package Assignment7thOct;
+
+public class Target {
+	public static void main(String[] args) {
+		String A = "harshal";
+		String B = "";
+		for(int i=0;i<A.length();i++) {
+			B = B + A.charAt(i);
+			System.out.println(B + " ");
+		}
+	}
+
+}
+
+
+
+//h
+//h a
+//h a r
+//h a r s
+//h a r s h
+//h a r s h a
+//h a r s h a l

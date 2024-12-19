@@ -1,0 +1,20 @@
+package day10;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class DateAssignment {
+	public static void main(String[] args) {
+
+		LocalDate today = LocalDate.now();
+		System.out.println(today);
+		
+		LocalDate Birthday = LocalDate.of(2003, 6,2);
+		System.out.println(Birthday);
+		
+		Period Age= today.until(Birthday);
+		System.out.println(Age);
+		
+
+	}
+}

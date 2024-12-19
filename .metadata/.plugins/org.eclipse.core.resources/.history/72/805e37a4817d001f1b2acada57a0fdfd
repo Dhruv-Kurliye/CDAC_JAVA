@@ -1,0 +1,104 @@
+package day5;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class EmployeeCollection {
+    public List<Employee> initializeEmployeeData() {
+        List<Employee> emplist = new ArrayList<>();
+
+        // Adding five employees
+        Set<String> skills1 = new TreeSet<>();
+        skills1.add("Java");
+        skills1.add("Spring");
+        emplist.add(new Employee(567, "Alice", 30, skills1));
+
+        Set<String> skills2 = new TreeSet<>();
+        skills2.add("Python");
+        skills2.add("Django");
+        emplist.add(new Employee(785, "Bob", 25, skills2));
+
+        Set<String> skills3 = new TreeSet<>();
+        skills3.add("JavaScript");
+        skills3.add("React");
+        emplist.add(new Employee(985, "Charlie", 28, skills3));
+
+        Set<String> skills4 = new TreeSet<>();
+        skills4.add("C#");
+        skills4.add("ASP.NET");
+        emplist.add(new Employee(365, "David", 35, skills4));
+
+        Set<String> skills5 = new TreeSet<>();
+        skills5.add("Ruby");
+        skills5.add("Rails");
+        emplist.add(new Employee(967, "Eve", 22, skills5));
+
+        return emplist;
+    }
+    
+//    GetEmployee
+    
+    public Employee getEmployee(List<Employee> emplist, int empid) {
+    	for (Employee e : emplist) {
+    		if(e.getEmpid()==empid) {
+    			return e;
+    		}
+    	}
+    	return null;
+    	
+    }
+    
+    public void printList(List<Employee> emplist) {
+    	for(Employee e : emplist) {
+    		System.out.println(e);
+    	}
+    }
+    
+    public Employee searchEmployee(List<Employee> emplist, int empid) {
+    	for(Employee e : emplist) {
+    		if(e.getEmpid()==empid) {
+    			return e;
+    		}
+    	}
+    	return null;
+    }
+    
+    public List<Employee> filterEmployees(List<Employee> emplist, String criteria){
+    	List<Employee> filtered = new ArrayList<>();
+    	for(Employee e : emplist) {
+    		if(e.getSkillset().contains(criteria)) {
+    			filtered.add(e);
+    		}
+    	}
+    	return filtered;
+    }
+    
+    public Map<Integer , Double> salaryMap(List<Employee> emplist){
+    	Map<Integer, Double> salmap = new TreeMap<>();
+    	for(Employee e : emplist) {
+    		salmap.put(e.getEmpid(),e.getSalary());
+    		}
+    	return salmap;
+    }
+    	
+    
+	public static void main(String[] args) {
+    	
+   
+        EmployeeCollection e = new EmployeeCollection();
+        List<Employee> emplist = e.initializeEmployeeData();
+        
+        e.printList(emplist);
+
+        // Print employee data
+        for (Employee employee : emplist) {
+            System.out.println(employee);
+        }
+    }
+}
+		
+			

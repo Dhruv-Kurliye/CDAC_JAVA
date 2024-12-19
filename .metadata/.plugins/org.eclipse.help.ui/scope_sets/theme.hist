@@ -1,0 +1,6 @@
+#Tue Sep 24 12:25:11 IST 2024
+__DEFAULT__=false
+expression=theme
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true
